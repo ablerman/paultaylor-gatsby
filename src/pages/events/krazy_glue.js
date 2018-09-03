@@ -1,26 +1,61 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton/IconButton';
+import MenuIcon from '@material-ui/core/SvgIcon/SvgIcon';
+import Typography from '@material-ui/core/Typography/Typography';
 import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponseiveDrawer';
 import Menu from '../../components/Menu/Menu';
-
 import PhotoPage from '../../components/PhotoPage/PhotoPage';
+import ResponsiveAppBar from '../../components/ResponsiveAppBar/ResponsiveAppBar';
+
 import photos from '../../constants/krazyGlue'
 
+const styles = (theme) => ({
+    root : {
+        [theme.breakpoints.up('md')] : {
+            marginLeft: '255px'
+        }
+    }
+})
 
-const amazon = (props) => {
-    return (
-        <div style={{marginLeft:'255px'}}>
-            <ResponsiveDrawer>
-                <Menu/>
-            </ResponsiveDrawer>
-            <PhotoPage title="Krazy Glue" photos={photos}/>
-        </div>
-    );
+class KrazyGlue extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            drawerOpen: false,
+        };
+    }
+
+    onOpen = () => {
+        this.setState({drawerOpen: true})
+    }
+
+    onClose = () => {
+        this.setState({drawerOpen: false})
+    }
+
+    render() {
+        const { classes } = this.props;
+        return (
+            <React.Fragment>
+                <ResponsiveDrawer open={this.state.drawerOpen} onClose={this.onClose}>
+                    <Menu onMenuClick={() => this.onClose()}/>
+                </ResponsiveDrawer>
+                <div>
+                    <ResponsiveAppBar onOpen={this.onOpen}>
+                        <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+                            <MenuIcon/>
+                            <Typography variant="title" color="inherit">PaulTaylor</Typography>
+                        </IconButton>
+                    </ResponsiveAppBar>
+                    <div className={this.props.classes.root}>
+                        <PhotoPage title="Krazy Glue" photos={photos}/>
+                    </div>
+                </div>
+            </React.Fragment>
+        );
+    }
 };
 
-
-amazon.defaultProps = {};
-
-amazon.propTypes = {};
-
-export default amazon;
+export default withStyles(styles)(KrazyGlue);

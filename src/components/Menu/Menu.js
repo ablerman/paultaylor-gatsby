@@ -27,7 +27,7 @@ const Menu = (props) => {
                 <Button
                   component={Link}
                   to={child.location}
-                  // onClick={onButtonClick}
+                  onClick={onButtonClick}
                 >
                   {child.name}
                 </Button>
@@ -45,7 +45,7 @@ const Menu = (props) => {
         <Button
           component={Link}
           to={item.location}
-          // onClick={onButtonClick}
+          onClick={onButtonClick}
         >
           {item.name}
         </Button>
