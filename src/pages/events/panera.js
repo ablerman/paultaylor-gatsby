@@ -13,7 +13,7 @@ const amazon = (props) => {
             <ResponsiveDrawer>
                 <Menu/>
             </ResponsiveDrawer>
-            <PhotoPage title="Amazon Alexa // Smartlife Roadshow" photos={photos}/>
+            <PhotoPage title="Paners" photos={photos}/>
         </div>
     );
 };

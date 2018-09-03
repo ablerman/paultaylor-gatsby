@@ -4,7 +4,7 @@ import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponseiveDrawe
 import Menu from '../../components/Menu/Menu';
 
 import PhotoPage from '../../components/PhotoPage/PhotoPage';
-import photos from '../../constants/amazonPhotos'
+import photos from '../../constants/rossanapansino'
 
 
 const amazon = (props) => {
@@ -13,7 +13,7 @@ const amazon = (props) => {
             <ResponsiveDrawer>
                 <Menu/>
             </ResponsiveDrawer>
-            <PhotoPage title="Amazon Alexa // Smartlife Roadshow" photos={photos}/>
+            <PhotoPage title="Rossana Pansino" photos={photos}/>
         </div>
     );
 };

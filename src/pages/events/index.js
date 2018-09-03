@@ -14,6 +14,7 @@ class events extends React.Component {
     }
 
     render() {
+        console.log(menu);
         const photos = compose(
             path(['photos']),
             head,
