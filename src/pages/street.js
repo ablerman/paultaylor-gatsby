@@ -3,7 +3,7 @@ import ResponsiveDrawer from '../components/ResponsiveDrawer/ResponseiveDrawer';
 import Menu from '../components/Menu/Menu';
 import PhotoPage from '../components/PhotoPage/PhotoPage';
 
-import photos from '../constants/streetPhotos'
+import photos from '../constants/streetPhotos';
 
 class Street extends React.Component {
     constructor(props) {
@@ -14,11 +14,11 @@ class Street extends React.Component {
 
     render() {
         return (
-            <div style={{marginLeft:'255px'}}>
+            <div style={{ marginLeft: '255px' }}>
                 <ResponsiveDrawer>
-                    <Menu/>
+                    <Menu />
                 </ResponsiveDrawer>
-                <PhotoPage title="Street" photos={photos}/>
+                <PhotoPage title="Street" photos={photos} />
             </div>
         );
     }

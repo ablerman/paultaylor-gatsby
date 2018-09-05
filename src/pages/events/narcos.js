@@ -8,54 +8,63 @@ import Menu from '../../components/Menu/Menu';
 import PhotoPage from '../../components/PhotoPage/PhotoPage';
 import ResponsiveAppBar from '../../components/ResponsiveAppBar/ResponsiveAppBar';
 
-import photos from '../../constants/narcos'
+import photos from '../../constants/narcos';
 
-const styles = (theme) => ({
-    root : {
-        [theme.breakpoints.up('md')] : {
+const styles = theme => ({
+    root: {
+        [theme.breakpoints.up('md')]: {
             marginLeft: '255px'
         }
     }
-})
+});
 
 class Narcos extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            drawerOpen: false,
+            drawerOpen: false
         };
     }
 
     onOpen = () => {
-        this.setState({drawerOpen: true})
-    }
+        this.setState({ drawerOpen: true });
+    };
 
     onClose = () => {
-        this.setState({drawerOpen: false})
-    }
+        this.setState({ drawerOpen: false });
+    };
 
     render() {
         const { classes } = this.props;
         return (
             <React.Fragment>
-                <ResponsiveDrawer open={this.state.drawerOpen} onClose={this.onClose}>
-                    <Menu onMenuClick={() => this.onClose()}/>
+                <ResponsiveDrawer
+                    open={this.state.drawerOpen}
+                    onClose={this.onClose}
+                >
+                    <Menu onMenuClick={() => this.onClose()} />
                 </ResponsiveDrawer>
                 <div>
                     <ResponsiveAppBar onOpen={this.onOpen}>
-                        <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-                            <MenuIcon/>
-                            <Typography variant="title" color="inherit">PaulTaylor</Typography>
+                        <IconButton
+                            className={classes.menuButton}
+                            color="inherit"
+                            aria-label="Menu"
+                        >
+                            <MenuIcon />
+                            <Typography variant="title" color="inherit">
+                                PaulTaylor
+                            </Typography>
                         </IconButton>
                     </ResponsiveAppBar>
                     <div className={this.props.classes.root}>
-                        <PhotoPage title="Narcos" photos={photos}/>
+                        <PhotoPage title="Narcos" photos={photos} />
                     </div>
                 </div>
             </React.Fragment>
         );
     }
-};
+}
 
 export default withStyles(styles)(Narcos);

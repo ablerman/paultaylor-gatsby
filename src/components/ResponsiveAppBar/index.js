@@ -1,2 +1,2 @@
-import ResponsiveAppBar from './ResponsiveAppBar'
-export default ResponsiveAppBar
+import ResponsiveAppBar from './ResponsiveAppBar';
+export default ResponsiveAppBar;

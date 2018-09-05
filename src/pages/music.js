@@ -3,7 +3,7 @@ import ResponsiveDrawer from '../components/ResponsiveDrawer/ResponseiveDrawer';
 import Menu from '../components/Menu/Menu';
 import PhotoPage from '../components/PhotoPage/PhotoPage';
 
-import photos from '../constants/musicPhotos'
+import photos from '../constants/musicPhotos';
 
 class Music extends React.Component {
     constructor(props) {
@@ -14,11 +14,11 @@ class Music extends React.Component {
 
     render() {
         return (
-            <div style={{marginLeft:'255px'}}>
+            <div style={{ marginLeft: '255px' }}>
                 <ResponsiveDrawer>
-                    <Menu/>
+                    <Menu />
                 </ResponsiveDrawer>
-                <PhotoPage title="Music" photos={photos}/>
+                <PhotoPage title="Music" photos={photos} />
             </div>
         );
     }

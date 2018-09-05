@@ -25,6 +25,7 @@
     "gatsby-plugin-react-helmet": "next",
     "jss": "^9.8.7",
     "lodash.capitalize": "^4.2.1",
+    "mime": "^2.3.1",
     "node-vibrant": "^3.0.0",
     "numeral": "^2.0.6",
     "prop-types": "^15.6.2",

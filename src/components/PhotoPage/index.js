@@ -1,2 +1,2 @@
-import PhotoPage from './PhotoPage'
-export default PhotoPage
+import PhotoPage from './PhotoPage';
+export default PhotoPage;

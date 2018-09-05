@@ -6,57 +6,66 @@ import { withStyles } from '@material-ui/core/styles';
 import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponseiveDrawer';
 import Menu from '../../components/Menu/Menu';
 import PhotoPage from '../../components/PhotoPage/PhotoPage';
-import {filter, path, head, compose} from 'ramda'
+import { filter, path, head, compose } from 'ramda';
 
-import menu from '../../constants/menu'
+import menu from '../../constants/menu';
 import ResponsiveAppBar from '../../components/ResponsiveAppBar/ResponsiveAppBar';
 
-const styles = (theme) => ({
-    root : {
-        [theme.breakpoints.up('md')] : {
+const styles = theme => ({
+    root: {
+        [theme.breakpoints.up('md')]: {
             marginLeft: '255px'
         }
     }
-})
+});
 
 class events extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            drawerOpen: false,
+            drawerOpen: false
         };
     }
 
     onOpen = () => {
-        this.setState({drawerOpen: true})
-    }
+        this.setState({ drawerOpen: true });
+    };
 
     onClose = () => {
-        this.setState({drawerOpen: false})
-    }
+        this.setState({ drawerOpen: false });
+    };
 
     render() {
         const { classes } = this.props;
         const photos = compose(
             path(['photos']),
             head,
-            filter(item => item.name === 'events'),
-        )(menu)
+            filter(item => item.name === 'events')
+        )(menu);
         return (
             <div>
-                <ResponsiveDrawer open={this.state.drawerOpen} onClose={this.onClose}>
-                    <Menu/>
+                <ResponsiveDrawer
+                    open={this.state.drawerOpen}
+                    onClose={this.onClose}
+                >
+                    <Menu />
                 </ResponsiveDrawer>
-                <div >
+                <div>
                     <ResponsiveAppBar onOpen={this.onOpen}>
-                        <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-                            <MenuIcon/>
-                            <Typography variant="title" color="inherit">PaulTaylor</Typography>
+                        <IconButton
+                            className={classes.menuButton}
+                            color="inherit"
+                            aria-label="Menu"
+                        >
+                            <MenuIcon />
+                            <Typography variant="title" color="inherit">
+                                PaulTaylor
+                            </Typography>
                         </IconButton>
                     </ResponsiveAppBar>
                     <div className={this.props.classes.root}>
-                        <PhotoPage title="Events" photos={photos}/>
+                        <PhotoPage title="Events" photos={photos} />
                     </div>
                 </div>
             </div>
