@@ -17,7 +17,10 @@ const styles = theme => ({
         opacity: 0.9,
         '&:empty': {
             display: 'none'
-        }
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '5vw',
+        },
     },
     labelSpan: {
         display: 'inlineBlock',

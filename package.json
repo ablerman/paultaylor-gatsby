@@ -23,6 +23,7 @@
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
+    "jimp": "^0.4.0",
     "jss": "^9.8.7",
     "lodash.capitalize": "^4.2.1",
     "mime": "^2.3.1",

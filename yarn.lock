@@ -5374,7 +5374,7 @@ jest-worker@^23.2.0:
   dependencies:
     merge-stream "^1.0.1"
 
-jimp@*:
+jimp@*, jimp@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/jimp/-/jimp-0.4.0.tgz#19c9bb2d104e468a86f81962a99363f6f7b3be47"
   dependencies:
