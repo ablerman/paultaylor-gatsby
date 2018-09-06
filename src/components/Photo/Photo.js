@@ -1,7 +1,8 @@
 import React from 'react';
-import Vibrant from 'node-vibrant'
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { compose, map, filter, sortBy, prop, keys, reverse, head } from 'ramda';
+import { compose, } from 'ramda';
+import Palette from '../../utils/Palette'
 
 const styles = theme => ({
     label: {
@@ -14,10 +15,10 @@ const styles = theme => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        opacity: 0.9,
         '&:empty': {
             display: 'none'
         },
+        transition: 'opacity 0.5s',
         [theme.breakpoints.down('sm')]: {
             fontSize: '5vw',
         },
@@ -41,40 +42,27 @@ class Photo extends React.Component {
         super(props);
         this.state = {
             backgroundColor: 'hsl(0, 0%, 0%)',
-            color: 'hsl(0,0%,0%)'
+            color: 'hsl(0,0%,0%)',
+            opacity: 0,
         };
     }
 
-    chooseColors = palette => {
-        const color = compose(
-            head,
-            reverse,
-            sortBy(prop('population')),
-            map(item => ({
-                name: item,
-                population: palette[item]._population,
-                rgb: palette[item]._rgb,
-                hsl: palette[item]._hsl
-            })),
-            filter(item => palette[item] !== null),
-            keys
-        )(palette);
-
-        const hsl = color.hsl;
-        const foreLum = (hsl[2] * 100 + 25) % 100;
-        return {
-            background: `hsl(${hsl[0] * 360}, ${hsl[1] * 100}%, ${hsl[2] *
-                100}%)`,
-            foreground: `hsl(${hsl[0] * 360}, ${hsl[1] * 100}%, ${foreLum}%)`
-        };
-    };
-
     onImageLoaded = async e => {
-        const palette = await( Vibrant.from(e.target).getPalette())
-        const colors = this.chooseColors(palette);
+        if(!this.props.label) {
+            return
+        }
+        const colors = Palette.getPaletteFromIMG(e.target)
+        const background = colors[0];
+        const hsl = Palette.RGBtoHSL(background[0], background[1], background[2])
+        hsl[1] = hsl[1] * 100;
+        hsl[2] = (hsl[2]*100+50)%100
+
+        const backgroundColor = `rgb(${background[0]}, ${background[1]}, ${background[2]})`
+        const color = `hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)`
         this.setState({
-          backgroundColor: colors.background,
-          color: colors.foreground,
+            backgroundColor: backgroundColor,
+            color: color,
+            opacity: 0.9,
         })
     };
 
@@ -89,7 +77,7 @@ class Photo extends React.Component {
                 />
                 <div
                     className={this.props.classes.label}
-                    style={{ backgroundColor: this.state.backgroundColor }}
+                    style={{ opacity: this.state.opacity, backgroundColor: this.state.backgroundColor }}
                 >
                     <span
                         className={this.props.classes.labelSpan}
@@ -122,9 +110,15 @@ class Photo extends React.Component {
     }
 }
 
-Photo.defaultProps = {};
+Photo.defaultProps = {
+    label: null,
+};
 
-Photo.propTypes = {};
+Photo.propTypes = {
+    label: PropTypes.string,
+};
 
 // export default withRouter(Photo);
-export default compose(withStyles(styles))(Photo);
+export default compose(
+    withStyles(styles)
+)(Photo);
