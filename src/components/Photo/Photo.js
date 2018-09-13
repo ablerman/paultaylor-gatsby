@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { compose, } from 'ramda';
-import Palette from '../../utils/Palette'
+import { compose } from 'ramda';
+import Palette from '../../utils/Palette';
 
 const styles = theme => ({
     label: {
@@ -20,8 +20,8 @@ const styles = theme => ({
         },
         transition: 'opacity 0.5s',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '5vw',
-        },
+            fontSize: '5vw'
+        }
     },
     labelSpan: {
         display: 'inlineBlock',
@@ -43,27 +43,33 @@ class Photo extends React.Component {
         this.state = {
             backgroundColor: 'hsl(0, 0%, 0%)',
             color: 'hsl(0,0%,0%)',
-            opacity: 0,
+            opacity: 0
         };
     }
 
     onImageLoaded = async e => {
-        if(!this.props.label) {
-            return
+        if (!this.props.label) {
+            return;
         }
-        const colors = Palette.getPaletteFromIMG(e.target)
+        const colors = Palette.getPaletteFromIMG(e.target);
         const background = colors[0];
-        const hsl = Palette.RGBtoHSL(background[0], background[1], background[2])
+        const hsl = Palette.RGBtoHSL(
+            background[0],
+            background[1],
+            background[2]
+        );
         hsl[1] = hsl[1] * 100;
-        hsl[2] = (hsl[2]*100+50)%100
+        hsl[2] = (hsl[2] * 100 + 50) % 100;
 
-        const backgroundColor = `rgb(${background[0]}, ${background[1]}, ${background[2]})`
-        const color = `hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)`
+        const backgroundColor = `rgb(${background[0]}, ${background[1]}, ${
+            background[2]
+        })`;
+        const color = `hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)`;
         this.setState({
             backgroundColor: backgroundColor,
             color: color,
-            opacity: 0.9,
-        })
+            opacity: 0.9
+        });
     };
 
     renderPhoto = () => {
@@ -77,7 +83,10 @@ class Photo extends React.Component {
                 />
                 <div
                     className={this.props.classes.label}
-                    style={{ opacity: this.state.opacity, backgroundColor: this.state.backgroundColor }}
+                    style={{
+                        opacity: this.state.opacity,
+                        backgroundColor: this.state.backgroundColor
+                    }}
                 >
                     <span
                         className={this.props.classes.labelSpan}
@@ -97,10 +106,17 @@ class Photo extends React.Component {
     );
 
     renderCarouselLink = content => {
-        // const filename = this.props.path.split('/').pop()
-        // const dest = `${this.props.location.pathname}/${filename}`
-        const dest = 'dest';
-        return <a href={dest}>{content}</a>;
+        const filename = this.props.path
+            .split('/')
+            .pop()
+            .split('.')
+            .shift();
+
+        if (typeof window !== `undefined`) {
+            const dest = `${document.location.pathname}?image=${filename}`;
+            return <a href={dest}>{content}</a>;
+        }
+        return 'dest'
     };
 
     render() {
@@ -111,14 +127,12 @@ class Photo extends React.Component {
 }
 
 Photo.defaultProps = {
-    label: null,
+    label: null
 };
 
 Photo.propTypes = {
-    label: PropTypes.string,
+    label: PropTypes.string
 };
 
 // export default withRouter(Photo);
-export default compose(
-    withStyles(styles)
-)(Photo);
+export default compose(withStyles(styles))(Photo);

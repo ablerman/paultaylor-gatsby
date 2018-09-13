@@ -40,7 +40,7 @@ const filenames = [
 
 const photos = compose(
     map(item => ({
-        path: `/media/portfolio/places/${item}`,
+        path: `/portfolio/places/${item}`,
         alt: item.split('.')[0]
     }))
 )(filenames);

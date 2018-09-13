@@ -1,2 +1,2 @@
-import Palette from './Palette'
-export default Palette
+import Palette from './Palette';
+export default Palette;

@@ -1,14 +1,12 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import ResponsiveDrawer from '../components/ResponsiveDrawer/ResponseiveDrawer';
-import Menu from '../components/Menu/Menu';
+import { parse } from 'query-string';
+import { navigate } from "gatsby"
+import Layout from '../components/Layout'
 import PhotoPage from '../components/PhotoPage/PhotoPage';
+import Carousel from '../components/Carousel';
 
 import photos from '../constants/musicPhotos';
-import ResponsiveAppBar from '../components/ResponsiveAppBar/ResponsiveAppBar';
-import IconButton from '@material-ui/core/IconButton/IconButton';
-import MenuIcon from '@material-ui/core/SvgIcon/SvgIcon';
-import Typography from '@material-ui/core/Typography/Typography';
 
 const styles = theme => ({
     root: {
@@ -18,44 +16,39 @@ const styles = theme => ({
     }
 });
 
-class Street extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {};
+class Amazon extends React.Component {
+    closeCarousel = () => {
+        const pathname = this.props.location.pathname;
+        navigate(pathname);
     }
 
+    renderContent = () => {
+        const queryParams = parse(this.props.location.search);
+        if (queryParams.image !== undefined) {
+            return (
+                <Carousel
+                    photos={photos}
+                    currentPhoto={queryParams.image}
+                    onClose={this.closeCarousel}
+                />
+            );
+        } else {
+            return (
+                <PhotoPage
+                    title="Music"
+                    photos={photos}
+                />
+            );
+        }
+    };
+
     render() {
-        const { classes } = this.props;
         return (
-            <React.Fragment>
-                <ResponsiveDrawer
-                    open={this.state.drawerOpen}
-                    onClose={this.onClose}
-                >
-                    <Menu onMenuClick={() => this.onClose()} />
-                </ResponsiveDrawer>
-                <div>
-                    <ResponsiveAppBar onOpen={this.onOpen}>
-                        <IconButton
-                            className={classes.menuButton}
-                            color="inherit"
-                            aria-label="Menu"
-                        >
-                            <MenuIcon />
-                            <Typography variant="title" color="inherit">
-                                PaulTaylor
-                            </Typography>
-                        </IconButton>
-                    </ResponsiveAppBar>
-                    <div className={this.props.classes.root}>
-                        <PhotoPage title="Music" photos={photos} />
-                    </div>
-                </div>
-            </React.Fragment>
-        );
+            <Layout>
+                {this.renderContent()}
+            </Layout>
+        )
     }
 }
 
-export default withStyles(styles)(Street);
-
+export default withStyles(styles)(Amazon);
