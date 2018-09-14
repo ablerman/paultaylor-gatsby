@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from "gatsby"
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
@@ -26,6 +27,8 @@ class events extends React.Component {
         this.state = {
             drawerOpen: false
         };
+
+        console.log(props.data);
     }
 
     onOpen = () => {
@@ -78,3 +81,13 @@ events.defaultProps = {};
 events.propTypes = {};
 
 export default withStyles(styles)(events);
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

@@ -2,8 +2,9 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { parse } from 'query-string';
 import { navigate } from "gatsby"
+
 import Layout from '../../components/Layout'
-import PhotoPage from '../../components/PhotoPage/PhotoPage';
+import PhotoPage from '../../components/PhotoPage';
 import Carousel from '../../components/Carousel';
 
 import photos from '../../constants/amazonPhotos';

@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Typography from '@material-ui/core/Typography';
+import Menu from '../../components/Menu'
+import ResponsiveDrawer from '../../components/ResponsiveDrawer'
+import ResponsiveAppBar from '../../components/ResponsiveAppBar';
 
 const styles = theme => ({
     root: {
@@ -27,24 +33,6 @@ class Layout extends React.Component {
         this.setState({ drawerOpen: false });
     };
 
-    renderContent = () => {
-        if (this.props.photos !== undefined) {
-            return (
-                <Carousel
-                    photos={this.props.photos}
-                    currentPhoto={this.props.image}
-                />
-            );
-        } else {
-            return (
-                <PhotoPage
-                    title={this.props.children}
-                    photos={this.props.photos}
-                />
-            );
-        }
-    };
-
     render() {
         return (
             <React.Fragment>
@@ -57,7 +45,7 @@ class Layout extends React.Component {
                 <div>
                     <ResponsiveAppBar onOpen={this.onOpen}>
                         <IconButton
-                            className={classes.menuButton}
+                            className={this.props.classes.menuButton}
                             color="inherit"
                             aria-label="Menu"
                         >
@@ -68,7 +56,7 @@ class Layout extends React.Component {
                         </IconButton>
                     </ResponsiveAppBar>
                     <div className={this.props.classes.root}>
-                        {this.renderContent()}
+                        {this.children}
                     </div>
                 </div>
             </React.Fragment>

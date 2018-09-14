@@ -2,7 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const styles = theme => ({
     section: {
