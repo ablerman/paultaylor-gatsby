@@ -11,7 +11,9 @@ import ResponsiveAppBar from '../../components/ResponsiveAppBar';
 const styles = theme => ({
     root: {
         [theme.breakpoints.up('md')]: {
-            marginLeft: '255px'
+            position:'relative',
+            left: '255px',
+            width: 'calc(100vw - 255px)',
         }
     }
 });
@@ -56,7 +58,7 @@ class Layout extends React.Component {
                         </IconButton>
                     </ResponsiveAppBar>
                     <div className={this.props.classes.root}>
-                        {this.children}
+                        {this.props.children}
                     </div>
                 </div>
             </React.Fragment>

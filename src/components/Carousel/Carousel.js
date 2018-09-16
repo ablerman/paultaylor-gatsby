@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { findIndex, find } from 'ramda';
-
+import Arrow from '../../components/Arrow'
 import Palette from '../../utils/Palette';
 
 const KEY_UP = 'keyup';
@@ -22,44 +22,16 @@ const styles = (theme) => ({
       borderRadius: '10px',
       overflow: 'hidden',
     },
-    leftLink: {
-      position: 'absolute',
-      width: '100px',
-      height: '100%',
-      left: 0,
-      top: 0,
-    },
-    rightLink: {
-      position: 'absolute',
-      width: '100px',
-      height: '100%',
-      right: 0,
-      top: 0,      
-    },
-    leftArrow: {
-      opacity: 0.7,
-      position: 'absolute',
-      top: 'calc(50% - 120px/2)',
-      width: 0,
-      height: 0,
-      borderTop: '60px solid transparent',
-      borderBottom: '60px solid transparent',
-      left: '10px',
-      borderRight: '60px solid #042860',
-      transition: 'all 1s',
-    },
-    rightArrow: {
-      opacity: 0.7,
-      position: 'absolute',
-      top: 'calc(50% - 120px/2)',
-      width: 0,
-      height: 0,
-      borderTop: '60px solid transparent',
-      borderBottom: '60px solid transparent',
-      right: '10px',
-      borderLeft: '60px solid #042860',
-      transition: 'all 1s',
-    },
+    link: {
+        position: 'absolute',
+        width: '150px',
+        height: '100%',
+        top: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
   })
   
 class Carousel extends React.Component {
@@ -67,7 +39,8 @@ class Carousel extends React.Component {
         super(props)
 
         this.state = {
-            borderColor :'rgba(0,0,0,0)',
+            arrowColor: 'rgba(0, 0, 0, 0)',
+            shadowColor: 'rgba(0,0,0,0)',
         }
     }
 
@@ -119,8 +92,9 @@ class Carousel extends React.Component {
         })`;
         const color = `hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)`;
         this.setState({
-            // borderColor: backgroundColor,
-            borderColor: color,
+            shadowColor: color,
+            arrowColor: backgroundColor,
+            // shadowColor: 'yellow',
         });                
     }
 
@@ -153,13 +127,34 @@ class Carousel extends React.Component {
         })(this.props.photos)
 
         return (
-            <div style={{position:'relative'}}>
-                <img src={photo.path} alt={this.props.currentPhoto}  onLoad={this.onImageLoaded} />
-                <a href={this.getPrev()} className={this.props.classes.leftLink}>
-                    <div className={this.props.classes.leftArrow} style={{ borderRight: `60px solid ${this.state.borderColor}`}}/>
+            <div style={{position:'relative', width:'100%'}}>
+                <img
+                    src={photo.path}
+                    alt={this.props.currentPhoto}
+                    onLoad={this.onImageLoaded}
+                    style={{width: '100%',}}
+                />
+                <a
+                    href={this.getPrev()}
+                    className={this.props.classes.link}
+                    style={{left:0}}
+                >
+                    <Arrow
+                        direction={Arrow.LEFT}
+                        color={this.state.arrowColor}
+                        shadowColor={this.state.shadowColor}
+                    />
                 </a>
-                <a href={this.getNext()} className={this.props.classes.rightLink}>
-                    <div className={this.props.classes.rightArrow} style={{borderLeft: `60px solid ${this.state.borderColor}`}}/>                
+                <a
+                    href={this.getNext()}
+                    className={this.props.classes.link}
+                    style={{right:0}}
+                >
+                    <Arrow
+                        direction={Arrow.RIGHT}
+                        color={this.state.arrowColor}
+                        shadowColor={this.state.shadowColor}
+                    />
                 </a>            
             </div>
         );

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { MasonryContainer, MasonryPanel } from 'components/Masonry';
 import Photo from 'components/Photo';
 
@@ -19,6 +20,8 @@ const PhotoPage = props => {
 
 PhotoPage.defaultProps = {};
 
-PhotoPage.propTypes = {};
+PhotoPage.propTypes = {
+    photos: PropTypes.array
+};
 
 export default PhotoPage;

@@ -26,6 +26,7 @@ class Amazon extends React.Component {
     renderContent = () => {
         const queryParams = parse(this.props.location.search);
         if (queryParams.image !== undefined) {
+            console.log('carousel')
             return (
                 <Carousel
                     photos={photos}
@@ -35,6 +36,7 @@ class Amazon extends React.Component {
                 />
             );
         } else {
+            console.log('Photos: ', photos)
             return (
                 <PhotoPage
                     title="Amazon Alexa // Smartlife Roadshow"
