@@ -45,7 +45,7 @@ class Amazon extends React.Component {
 
     render() {
         return (
-            <Layout>
+            <Layout location={this.props.location}>
                 {this.renderContent()}
             </Layout>
         )

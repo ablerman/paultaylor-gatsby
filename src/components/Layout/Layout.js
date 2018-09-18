@@ -21,7 +21,7 @@ const styles = theme => ({
 class Layout extends React.Component {
     constructor(props) {
         super(props);
-
+        console.log(this.props);
         this.state = {
             drawerOpen: false,
         };
@@ -42,7 +42,10 @@ class Layout extends React.Component {
                     open={this.state.drawerOpen}
                     onClose={this.onClose}
                 >
-                    <Menu onMenuClick={() => this.onClose()}/>
+                    <Menu
+                        onMenuClick={() => this.onClose()}
+                        location={this.props.location}
+                    />
                 </ResponsiveDrawer>
                 <div>
                     <ResponsiveAppBar onOpen={this.onOpen}>

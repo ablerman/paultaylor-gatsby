@@ -50,7 +50,7 @@ class events extends React.Component {
                     open={this.state.drawerOpen}
                     onClose={this.onClose}
                 >
-                    <Menu />
+                    <Menu location={this.props.location}/>
                 </ResponsiveDrawer>
                 <div>
                     <ResponsiveAppBar onOpen={this.onOpen}>

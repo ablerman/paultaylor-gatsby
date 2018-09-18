@@ -36,7 +36,6 @@ class Amazon extends React.Component {
                 />
             );
         } else {
-            console.log('Photos: ', photos)
             return (
                 <PhotoPage
                     title="Amazon Alexa // Smartlife Roadshow"
@@ -47,9 +46,8 @@ class Amazon extends React.Component {
     };
 
     render() {
-        console.log('Amazon: ', this.props)
         return (
-            <Layout>
+            <Layout location={this.props.location}>
                 {this.renderContent()}
             </Layout>
         )
