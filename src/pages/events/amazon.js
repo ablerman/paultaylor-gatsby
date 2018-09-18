@@ -32,7 +32,7 @@ class Amazon extends React.Component {
                     photos={photos}
                     currentPhoto={queryParams.image}
                     onClose={this.closeCarousel}
-                    baseUrl="/events/"
+                    location={this.props.location}
                 />
             );
         } else {
@@ -47,6 +47,7 @@ class Amazon extends React.Component {
     };
 
     render() {
+        console.log('Amazon: ', this.props)
         return (
             <Layout>
                 {this.renderContent()}

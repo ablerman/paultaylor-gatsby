@@ -109,16 +109,12 @@ class Carousel extends React.Component {
 
     getPrev = () => {
         const prevImage = this.props.photos[this.getOffset(-1)].path.split('/').pop()
-        return `${this.props.baseUrl}${this.getEvent()}?image=${prevImage}`
+        return `${this.props.location.pathname}?image=${prevImage}`
     }
 
     getNext = () => {
         const nextImage = this.props.photos[this.getOffset(1)].path.split('/').pop()
-        return `${this.props.baseUrl}${this.getEvent()}?image=${nextImage}`
-    }
-
-    getEvent = () => {
-        return document.location.pathname.split('/').pop()
+        return `${this.props.location.pathname}?image=${nextImage}`
     }
 
     render() {
@@ -127,7 +123,7 @@ class Carousel extends React.Component {
         })(this.props.photos)
 
         return (
-            <div style={{position:'relative', width:'100%'}}>
+            <div style={{position:'relative', width:'100%', overflow: 'hidden', }}>
                 <img
                     src={photo.path}
                     alt={this.props.currentPhoto}
@@ -162,14 +158,13 @@ class Carousel extends React.Component {
 };
 
 Carousel.defaultProps = {
-    baseUrl: '',
 };
 
 Carousel.propTypes = {
     currentPhoto: PropTypes.string,
     photos: PropTypes.array,
     onClose: PropTypes.func,
-    baseUrl: PropTypes.string,
+    location: PropTypes.object,
 };
 
 export default withStyles(styles)(Carousel);

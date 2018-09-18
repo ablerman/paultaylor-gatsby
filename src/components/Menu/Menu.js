@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from 'gatsby';
 // import { Link } from 'react-router-dom'
 
-import menu from 'constants/menu';
+import menu from '../../constants/menu';
 
 const Menu = props => {
     const onButtonClick = () => {
@@ -24,7 +24,7 @@ const Menu = props => {
                             <ListItemText>
                                 <Button
                                     component={Link}
-                                    to={child.location}
+                                    to={`${child.location}/index.html`}
                                     onClick={onButtonClick}
                                 >
                                     {child.name}
@@ -42,7 +42,7 @@ const Menu = props => {
             <Typography>
                 <Button
                     component={Link}
-                    to={item.location}
+                    to={`${item.location}/index.html`}
                     onClick={onButtonClick}
                 >
                     {item.name}

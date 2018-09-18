@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MasonryContainer, MasonryPanel } from 'components/Masonry';
-import Photo from 'components/Photo';
+import { MasonryContainer, MasonryPanel } from '../../components/Masonry';
+import Photo from '../../components/Photo';
 
 const PhotoPage = props => {
     return (

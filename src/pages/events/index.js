@@ -27,8 +27,6 @@ class events extends React.Component {
         this.state = {
             drawerOpen: false
         };
-
-        console.log(props.data);
     }
 
     onOpen = () => {
