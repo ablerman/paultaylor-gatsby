@@ -13,6 +13,7 @@ import menu from '../../constants/menu';
 
 const styles = theme => ({
     root: {
+        fontFamily: 'Abel, sans-serif',
     },
     active : {
         fontWeight: 'bolder'
@@ -28,7 +29,7 @@ const Menu = props => {
     const generateList = children => {
         if (children.length) {
             return (
-                <List dense={true}>
+                <List dense={true} className={props.classes.root}>
                     {children.map(child => {
                         const pathname = props.location.pathname;
                         const location = `${child.location}/index.html`

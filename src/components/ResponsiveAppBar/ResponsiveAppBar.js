@@ -8,10 +8,16 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
-    root: { flex: { flexGrow: 1 } },
+    root: {
+        fontFamily: 'Abel, sans-serif',
+        flex: {
+            flexGrow: 1
+        }
+    },
     flex: { flexGrow: 1 },
     menuButton: {}
 });
+
 
 const ResponsiveAppBar = props => {
     return (
