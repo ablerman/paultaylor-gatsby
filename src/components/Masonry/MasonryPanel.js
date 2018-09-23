@@ -4,11 +4,11 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
     panel: {
         breakInside: 'avoid',
-        padding: '5px'
+        margin: '2px'
     },
     content: {
-        padding: '10px',
-        borderRadius: '10px',
+        // padding: '2px',
+        // borderRadius: '10px',
         overflow: 'hidden'
     }
 });

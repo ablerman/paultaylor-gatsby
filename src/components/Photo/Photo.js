@@ -10,8 +10,8 @@ const styles = theme => ({
         bottom: '3px',
         width: '100%',
         fontSize: '1.7vw',
-        borderBottomLeftRadius: '10px',
-        borderBottomRightRadius: '10px',
+        // borderBottomLeftRadius: '10px',
+        // borderBottomRightRadius: '10px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -33,7 +33,7 @@ const styles = theme => ({
     },
     img: {
         width: '100%',
-        borderRadius: '10px'
+        // borderRadius: '10px'
     }
 });
 

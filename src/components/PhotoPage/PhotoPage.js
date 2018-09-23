@@ -6,9 +6,15 @@ import Photo from '../../components/Photo';
 const PhotoPage = props => {
     return (
         <MasonryContainer>
-            <MasonryPanel>
-                <h1>{props.title}</h1>
-            </MasonryPanel>
+            {
+                props.title.length > 0 &&
+                (
+                    <MasonryPanel>
+                        <h1 style={{textAlign: 'center'}}>{props.title}</h1>
+                    </MasonryPanel>
+
+                )
+            }
             {props.photos.map(photo => (
                 <MasonryPanel key={photo.alt}>
                     <Photo {...photo} />
@@ -18,10 +24,13 @@ const PhotoPage = props => {
     );
 };
 
-PhotoPage.defaultProps = {};
+PhotoPage.defaultProps = {
+    title: ''
+};
 
 PhotoPage.propTypes = {
-    photos: PropTypes.array
+    photos: PropTypes.array,
+    title: PropTypes.string
 };
 
 export default PhotoPage;
