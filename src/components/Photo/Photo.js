@@ -116,7 +116,7 @@ class Photo extends React.Component {
 
         if (typeof window !== `undefined`) {
             const dest = `${document.location.pathname}?image=${filename}`;
-            return <a href={withPrefix(dest)}>{content}</a>;
+            return <a href={dest}>{content}</a>;
         }
         return null
     };
