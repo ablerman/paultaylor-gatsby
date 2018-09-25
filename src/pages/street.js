@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { parse } from 'query-string';
+import {pathOr} from 'ramda'
 import { navigate } from "gatsby"
 import Layout from '../components/Layout'
 import PhotoPage from '../components/PhotoPage/PhotoPage';
@@ -18,7 +19,7 @@ const styles = theme => ({
 
 class Amazon extends React.Component {
     closeCarousel = () => {
-        const pathname = this.props.location.pathname;
+        const pathname = pathOr(null, ['props', 'location', 'pathname'], this);
         navigate(pathname);
     }
 

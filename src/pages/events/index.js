@@ -5,7 +5,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
 import Mail from '@material-ui/icons/MailOutlined'
 import {Instagram, Tumblr} from '../../components/Icons'
-
 import { withStyles } from '@material-ui/core/styles';
 import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponseiveDrawer';
 import Menu from '../../components/Menu/Menu';

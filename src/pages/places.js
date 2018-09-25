@@ -7,6 +7,7 @@ import PhotoPage from '../components/PhotoPage/PhotoPage';
 import Carousel from '../components/Carousel';
 
 import photos from '../constants/placesPhotos';
+import { pathOr } from 'ramda';
 
 const styles = theme => ({
     root: {
@@ -18,7 +19,7 @@ const styles = theme => ({
 
 class Amazon extends React.Component {
     closeCarousel = () => {
-        const pathname = this.props.location.pathname;
+        const pathname = pathOr(null, ['props', 'location', 'pathname'], this);
         navigate(pathname);
     }
 

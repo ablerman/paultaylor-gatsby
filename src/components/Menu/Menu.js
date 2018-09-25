@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import {pathOr} from 'ramda'
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -33,7 +34,7 @@ const Menu = props => {
             return (
                 <List dense={true} className={props.classes.root}>
                     {children.map(child => {
-                        const pathname = props.location.pathname;
+                        const pathname = pathOr(null, ['location', 'pathname'], props);
                         const location = `${child.location}/index.html`
                         const classes = classnames(
                             props.classes.root,
@@ -62,7 +63,7 @@ const Menu = props => {
     };
 
     const generateHeading = item => {
-        const pathname = props.location.pathname;
+        const pathname = pathOr(null, ['location', 'pathname'], props);
         const location = `${item.location}/index.html`
 
         const classes = classnames(
