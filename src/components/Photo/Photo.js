@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { withPrefix } from 'gatsby'
 import { compose } from 'ramda';
 import Palette from '../../utils/Palette';
 
@@ -77,7 +78,7 @@ class Photo extends React.Component {
         return (
             <div style={{ position: 'relative' }}>
                 <img
-                    src={this.props.path}
+                    src={withPrefix(this.props.path)}
                     alt={this.props.alt}
                     className={this.props.classes.img}
                     onLoad={e => this.onImageLoaded(e)}
