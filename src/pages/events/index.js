@@ -4,6 +4,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
 import Mail from '@material-ui/icons/MailOutlined'
+import { withPrefix } from 'gatsby'
 import {Instagram, Tumblr} from '../../components/Icons'
 import { withStyles } from '@material-ui/core/styles';
 import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponseiveDrawer';
@@ -63,7 +64,7 @@ class events extends React.Component {
                     onClose={this.onClose}
                 >
                     <div>
-                        <a href="/" style={{textDecoration: 'none'}}>
+                        <a href={withPrefix('/')} style={{textDecoration: 'none'}}>
                             <h1 style={headlineStyle}>
                                 Paul Taylor
                             </h1>

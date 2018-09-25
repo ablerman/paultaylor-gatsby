@@ -102,7 +102,7 @@ class Photo extends React.Component {
     };
 
     renderLink = content => (
-        <a href={this.props.to} alt={this.props.alt}>
+        <a href={withPrefix(this.props.to)} alt={this.props.alt}>
             {content}
         </a>
     );
@@ -116,7 +116,7 @@ class Photo extends React.Component {
 
         if (typeof window !== `undefined`) {
             const dest = `${document.location.pathname}?image=${filename}`;
-            return <a href={dest}>{content}</a>;
+            return <a href={withPrefix(dest)}>{content}</a>;
         }
         return null
     };
