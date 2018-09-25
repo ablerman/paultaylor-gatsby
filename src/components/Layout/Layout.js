@@ -54,7 +54,7 @@ class Layout extends React.Component {
                     onClose={this.onClose}
                 >
                     <div>
-                        <a href="/">
+                        <a href="/" style={{textDecoration: 'none'}}>
                             <h1 style={headlineStyle}>
                                 Paul Taylor
                             </h1>

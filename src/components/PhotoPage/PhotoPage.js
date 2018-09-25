@@ -6,15 +6,15 @@ import Photo from '../../components/Photo';
 const PhotoPage = props => {
     return (
         <MasonryContainer>
-            {
-                props.title.length > 0 &&
-                (
-                    <MasonryPanel>
-                        <h1 style={{textAlign: 'center'}}>{props.title}</h1>
-                    </MasonryPanel>
+            {/*{*/}
+                {/*props.title.length > 0 &&*/}
+                {/*(*/}
+                    {/*<MasonryPanel>*/}
+                        {/*<h1 style={{textAlign: 'center'}}>{props.title}</h1>*/}
+                    {/*</MasonryPanel>*/}
 
-                )
-            }
+                {/*)*/}
+            {/*}*/}
             {props.photos.map(photo => (
                 <MasonryPanel key={photo.alt}>
                     <Photo {...photo} />

@@ -23,7 +23,7 @@ const ResponsiveAppBar = props => {
     return (
         <div className={props.classes.root}>
             <Hidden mdUp implementation="css">
-                <AppBar position="static">
+                <AppBar position="static" color="default">
                     <Toolbar>
                         <IconButton
                             className={props.classes.menuButton}

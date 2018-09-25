@@ -7,7 +7,7 @@ import Palette from '../../utils/Palette';
 const styles = theme => ({
     label: {
         position: 'absolute',
-        bottom: '3px',
+        bottom: '0px',
         width: '100%',
         fontSize: '1.7vw',
         // borderBottomLeftRadius: '10px',
@@ -33,6 +33,7 @@ const styles = theme => ({
     },
     img: {
         width: '100%',
+        fontSize: '1px',
         // borderRadius: '10px'
     }
 });
@@ -116,7 +117,7 @@ class Photo extends React.Component {
             const dest = `${document.location.pathname}?image=${filename}`;
             return <a href={dest}>{content}</a>;
         }
-        return 'dest'
+        return null
     };
 
     render() {
@@ -134,5 +135,4 @@ Photo.propTypes = {
     label: PropTypes.string
 };
 
-// export default withRouter(Photo);
 export default compose(withStyles(styles))(Photo);

@@ -9,19 +9,27 @@ import Carousel from '../components/Carousel';
 const photos = [
     {
         path: '/portfolio/events.jpg',
-        alt: 'Events'
+        alt: 'Events',
+        label: 'Events',
+        to: '/events/index.html',
     },
     {
         path: '/portfolio/placescropped.jpg',
-        alt: 'Places'
+        alt: 'Places',
+        label: 'Places',
+        to: '/places/index.html',
     },
     {
         path: '/portfolio/musiccropped.jpg',
-        alt: 'music'
+        alt: 'music',
+        label: 'Music',
+        to: '/music/index.html',
     },
     {
         path: '/portfolio/street.jpg',
-        alt: 'Street'
+        alt: 'Street',
+        label: 'Street',
+        to: '/street/index.html',
     }
 ]
 

@@ -4,7 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
     panel: {
         breakInside: 'avoid',
-        margin: '2px'
+        fontSize: 0,
+        // margin: '2px'
     },
     content: {
         // padding: '2px',

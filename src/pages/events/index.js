@@ -3,6 +3,9 @@ import { graphql } from "gatsby"
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
+import Mail from '@material-ui/icons/MailOutlined'
+import {Instagram, Tumblr} from '../../components/Icons'
+
 import { withStyles } from '@material-ui/core/styles';
 import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponseiveDrawer';
 import Menu from '../../components/Menu/Menu';
@@ -11,6 +14,7 @@ import { filter, path, head, compose } from 'ramda';
 
 import menu from '../../constants/menu';
 import ResponsiveAppBar from '../../components/ResponsiveAppBar/ResponsiveAppBar';
+import OffsiteLink from '../../components/OffsiteLink';
 
 const styles = theme => ({
     root: {
@@ -38,6 +42,15 @@ class events extends React.Component {
     };
 
     render() {
+        const headlineStyle = {
+            color: 'black',
+            textAlign: 'center',
+            marginBottom: 0,
+        }
+        const iconStyle = {
+            fill: 'black'
+        }
+
         const { classes } = this.props;
         const photos = compose(
             path(['photos']),
@@ -50,6 +63,24 @@ class events extends React.Component {
                     open={this.state.drawerOpen}
                     onClose={this.onClose}
                 >
+                    <div>
+                        <a href="/" style={{textDecoration: 'none'}}>
+                            <h1 style={headlineStyle}>
+                                Paul Taylor
+                            </h1>
+                        </a>
+                        <div style={{display:'flex', justifyContent: 'center'}}>
+                            <IconButton component={OffsiteLink} to="https://www.instagram.com/thisispaultaylor">
+                                <Instagram style={iconStyle}/>
+                            </IconButton>
+                            <IconButton component={OffsiteLink} to="https://thisispaultaylor.instagram.com">
+                                <Tumblr style={iconStyle}/>
+                            </IconButton>
+                            <IconButton component={OffsiteLink} to="mailto://hello@thisispayltaylor.com">
+                                <Mail style={iconStyle}/>
+                            </IconButton>
+                        </div>
+                    </div>
                     <Menu location={this.props.location}/>
                 </ResponsiveDrawer>
                 <div>
