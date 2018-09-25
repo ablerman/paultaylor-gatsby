@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
+import withRoot from '../../withRoot';
+import {compose} from 'ramda'
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Mail from '@material-ui/icons/MailOutlined'
@@ -106,4 +107,8 @@ Layout.propTypes = {
     children: PropTypes.any,
 };
 
-export default withStyles(styles)(Layout);
+export default compose(
+    withRoot,
+    withStyles(styles)
+)(Layout)
+// export default withRoot(withStyles(styles)(Layout));
