@@ -23,7 +23,9 @@ const styles = theme => ({
 
 const Menu = props => {
     const onButtonClick = () => {
-        props.onMenuClick();
+        if(props.onMenuClick) {
+            props.onMenuClick();
+        }
     };
 
     const generateList = children => {
