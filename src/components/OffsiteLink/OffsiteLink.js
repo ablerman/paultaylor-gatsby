@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const OffsiteLink = (props) => {
     return (
@@ -8,10 +7,5 @@ const OffsiteLink = (props) => {
         </a>
     )
 };
-
-
-OffsiteLink.defaultProps = {};
-
-OffsiteLink.propTypes = {};
 
 export default OffsiteLink;
