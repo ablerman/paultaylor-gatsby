@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: "/paultaylor-gatsby",
     siteMetadata: {
         title: 'Gatsby Material-UI Starter'
     },
