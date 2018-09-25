@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import {pathOr} from 'ramda'
+import { withPrefix } from 'gatsby'
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -39,7 +40,7 @@ const Menu = props => {
                         const classes = classnames(
                             props.classes.root,
                             {
-                                [props.classes.active]: pathname === location,
+                                [props.classes.active]: withPrefix(pathname) === location,
                             }
                         )
                         return (
@@ -69,7 +70,7 @@ const Menu = props => {
         const classes = classnames(
             props.classes.root,
             {
-                [props.classes.active]: pathname === location
+                [props.classes.active]: withPrefix(pathname) === location
             }
         )
 
