@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { withPrefix } from 'gatsby'
 import { findIndex, find } from 'ramda';
 import Arrow from '../../components/Arrow'
 import Palette from '../../utils/Palette';
@@ -125,7 +126,7 @@ class Carousel extends React.Component {
         return (
             <div style={{position:'relative', width:'100%', overflow: 'hidden', }}>
                 <img
-                    src={photo.path}
+                    src={withPrefix(photo.path)}
                     alt={this.props.currentPhoto}
                     onLoad={this.onImageLoaded}
                     style={{width: '100%',}}
