@@ -19,9 +19,16 @@ import OffsiteLink from '../../components/OffsiteLink';
 const styles = theme => ({
     root: {
         [theme.breakpoints.up('md')]: {
-            marginLeft: '255px'
+            marginLeft: '255px',
+            paddingTop: '20px',
         }
-    }
+    },
+    drawer: {
+        [theme.breakpoints.up('md')]: {
+            paddingTop: '20px',
+        }
+    },
+
 });
 
 class events extends React.Component {
@@ -63,7 +70,7 @@ class events extends React.Component {
                     open={this.state.drawerOpen}
                     onClose={this.onClose}
                 >
-                    <div>
+                    <div className={this.props.classes.drawer}>
                         <a href={withPrefix('/')} style={{textDecoration: 'none'}}>
                             <h1 style={headlineStyle}>
                                 Paul Taylor

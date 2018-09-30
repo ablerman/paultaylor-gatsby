@@ -21,7 +21,10 @@ const styles = theme => ({
             left: '255px',
             width: 'calc(100vw - 255px)',
         }
-    }
+    },
+    drawer: {
+        paddingTop: '20px',
+    },
 });
 
 class Layout extends React.Component {
@@ -55,7 +58,7 @@ class Layout extends React.Component {
                     open={this.state.drawerOpen}
                     onClose={this.onClose}
                 >
-                    <div>
+                    <div className={this.props.classes.drawer}>
                         <a href={withPrefix("/")} style={{textDecoration: 'none'}}>
                             <h1 style={headlineStyle}>
                                 Paul Taylor
