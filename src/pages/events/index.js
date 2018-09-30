@@ -7,7 +7,7 @@ import Mail from '@material-ui/icons/MailOutlined'
 import { withPrefix } from 'gatsby'
 import {Instagram, Tumblr} from '../../components/Icons'
 import { withStyles } from '@material-ui/core/styles';
-import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponseiveDrawer';
+import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponsiveDrawer';
 import Menu from '../../components/Menu/Menu';
 import PhotoPage from '../../components/PhotoPage/PhotoPage';
 import { filter, path, head, compose } from 'ramda';
