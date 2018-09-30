@@ -14,14 +14,20 @@ const ARROW_DOWN = 'ArrowDown';
 const ARROW_UP = 'ArrowUp';
 
 const styles = (theme) => ({
-    panel: {
-      breakInside: 'avoid',
-      padding: '5px',
-    },
+    // panel: {
+    //   breakInside: 'avoid',
+    //   padding: '5px',
+    // },
+    // content: {
+    //   padding: '10px',
+    //   borderRadius: '10px',
+    //   overflow: 'hidden',
+    // },
     content: {
-      padding: '10px',
-      borderRadius: '10px',
-      overflow: 'hidden',
+        position:'relative',
+        width:'100%',
+        overflow: 'hidden',
+        padding: '20px 20px 20px 30px',
     },
     link: {
         position: 'absolute',
@@ -124,7 +130,7 @@ class Carousel extends React.Component {
         })(this.props.photos)
 
         return (
-            <div style={{position:'relative', width:'100%', overflow: 'hidden', }}>
+            <div className={this.props.classes.content}>
                 <img
                     src={withPrefix(photo.path)}
                     alt={this.props.currentPhoto}
