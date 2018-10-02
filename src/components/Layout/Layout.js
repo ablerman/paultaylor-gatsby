@@ -20,6 +20,7 @@ const styles = theme => ({
             position:'relative',
             left: '255px',
             width: 'calc(100vw - 255px)',
+            paddingTop: '20px',
         }
     },
     drawer: {
