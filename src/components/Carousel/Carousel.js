@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { withPrefix } from 'gatsby'
 import { findIndex, find } from 'ramda';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 import Arrow from '../../components/Arrow'
 import Palette from '../../utils/Palette';
 
@@ -38,6 +39,18 @@ const styles = (theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    masonryLink: {
+        position: 'absolute',
+        width: '50px',
+        height: '50px',
+        top: '15px',
+        left: '25px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        cursor: 'pointer',
     }
   })
   
@@ -114,6 +127,10 @@ class Carousel extends React.Component {
         return (this.getIdx() + count + offset) % count
     }
 
+    getMasonryUrl = () => {
+        return this.props.location.pathname;
+    }
+
     getPrev = () => {
         const prevImage = this.props.photos[this.getOffset(-1)].path.split('/').pop()
         return `${this.props.location.pathname}?image=${prevImage}`
@@ -158,7 +175,23 @@ class Carousel extends React.Component {
                         color={this.state.arrowColor}
                         shadowColor={this.state.shadowColor}
                     />
-                </a>            
+                </a>
+                <a
+                    href={this.getMasonryUrl()}
+                    className={this.props.classes.masonryLink}
+                >
+                    <DashboardIcon
+                        style={{width: '25px', height: '25px', position: 'absolute', transform: 'scale(1.5)',
+                            filter: 'blur(5px)',
+                        }}
+                        nativeColor={this.state.arrowColor}
+                    />
+                    <DashboardIcon
+                        style={{width: '25px', height: '25px', position: 'absolute'}}
+                        nativeColor={this.state.shadowColor}
+                    />
+
+                </a>
             </div>
         );
     }
