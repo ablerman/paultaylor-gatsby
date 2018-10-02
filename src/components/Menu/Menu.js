@@ -17,6 +17,13 @@ const styles = theme => ({
     root: {
         fontFamily: 'Abel, sans-serif',
     },
+    list: {
+      paddingTop: 0,
+      paddingBottom: 0,
+    },
+    listItem: {
+      padding: '0 24px',
+    },
     active : {
         fontWeight: 'bolder'
     },
@@ -31,9 +38,10 @@ const Menu = props => {
     };
 
     const generateList = children => {
+        const listClasses = [props.classes.root, props.classes.list]
         if (children.length) {
             return (
-                <List dense={true} className={props.classes.root}>
+                <List dense={true} className={listClasses}>
                     {children.map(child => {
                         const pathname = pathOr(null, ['location', 'pathname'], props);
                         const location = `${child.location}/index.html`
@@ -44,7 +52,7 @@ const Menu = props => {
                             }
                         )
                         return (
-                            <ListItem key={child.name} >
+                            <ListItem key={child.name} className={props.classes.listItem}>
                                 <ListItemText>
                                     <Button
                                         component={Link}
