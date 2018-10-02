@@ -41,7 +41,7 @@ const Menu = props => {
         const listClasses = [props.classes.root, props.classes.list]
         if (children.length) {
             return (
-                <List dense={true} className={listClasses}>
+                <List dense={true} className={listClasses.join(' ')}>
                     {children.map(child => {
                         const pathname = pathOr(null, ['location', 'pathname'], props);
                         const location = `${child.location}/index.html`

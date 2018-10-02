@@ -4,6 +4,7 @@ import CYOPhotos from './cyoPhotos';
 import PlacesPhotos from './placesPhotos';
 import StreetPhotos from './streetPhotos';
 import MusicPhotos from './musicPhotos';
+import clientLogos from './clientLogos'
 
 import builder from './photosetBuilder';
 
@@ -108,6 +109,19 @@ const menu = [
         location: '/street',
         children: [],
         photos: StreetPhotos
+    },
+    {
+        name: 'clients',
+        location: '/clients',
+        children: [],
+        photos: clientLogos,
+    },
+    {
+        name: 'contact',
+        location: '/contact',
+        children: [],
+        photos: [],
     }
+
 ];
 export default menu;
