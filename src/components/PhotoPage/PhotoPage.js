@@ -1,27 +1,56 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 import { MasonryContainer, MasonryPanel } from '../../components/Masonry';
 import Photo from '../../components/Photo';
 
-const PhotoPage = props => {
-    return (
-        <MasonryContainer>
-            {/*{*/}
-                {/*props.title.length > 0 &&*/}
-                {/*(*/}
-                    {/*<MasonryPanel>*/}
-                        {/*<h1 style={{textAlign: 'center'}}>{props.title}</h1>*/}
-                    {/*</MasonryPanel>*/}
+const styles = theme => ({
+    photoPage: {
+        height:'100vh',
+        overflowY: 'auto',
+    },
+    backToTopBtn: {
+        cursor: 'pointer',
+            width: '100%',
+            padding:'20px 0',
+            textAlign: 'center',
+            '&:hover': {
+            backgroundColor: 'darkgray',
+        }
+    }
+})
 
-                {/*)*/}
-            {/*}*/}
-            {props.photos.map(photo => (
-                <MasonryPanel key={photo.alt}>
-                    <Photo {...photo} />
-                </MasonryPanel>
-            ))}
-        </MasonryContainer>
-    );
+class PhotoPage extends React.Component {
+    ref = React.createRef()
+
+    goToTop = () => {
+        this.ref.current.scrollTop = 0;
+    }
+
+
+    render() {
+        const classes = this.props.classes;
+        return (
+            <div
+                className={classes.photoPage}
+                ref={this.ref}
+            >
+                <MasonryContainer>
+                    {this.props.photos.map(photo => (
+                        <MasonryPanel key={photo.alt}>
+                            <Photo {...photo} />
+                        </MasonryPanel>
+                    ))}
+                </MasonryContainer>
+                <div
+                    className={classes.backToTopBtn}
+                    onClick={this.goToTop}
+                >
+                    <h2 style={{ display: 'block', }}>back to top</h2>
+                </div>
+            </div>
+        );
+    }
 };
 
 PhotoPage.defaultProps = {
@@ -33,4 +62,4 @@ PhotoPage.propTypes = {
     title: PropTypes.string
 };
 
-export default PhotoPage;
+export default withStyles(styles)(PhotoPage);
