@@ -37,7 +37,11 @@ class PhotoPage extends React.Component {
             >
                 <MasonryContainer>
                     {this.props.photos.map(photo => (
-                        <MasonryPanel key={photo.alt}>
+                        <MasonryPanel
+                            key={photo.alt}
+                            colSpan={photo.colSpan ? `span ${photo.colSpan}` : 'span 6'}
+                            rowSpan={photo.rowSpan ? `span ${photo.rowSpan}` : 'auto'}
+                        >
                             <Photo {...photo} />
                         </MasonryPanel>
                     ))}

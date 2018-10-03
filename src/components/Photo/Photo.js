@@ -34,6 +34,7 @@ const styles = theme => ({
     },
     img: {
         width: '100%',
+        height: '100%',
         fontSize: '1px',
         // borderRadius: '10px'
     }
@@ -76,7 +77,7 @@ class Photo extends React.Component {
 
     renderPhoto = () => {
         return (
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative', width:'100%', height: '100%', }}>
                 <img
                     src={withPrefix(this.props.path)}
                     alt={this.props.alt}
