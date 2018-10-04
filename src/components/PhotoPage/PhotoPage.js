@@ -6,8 +6,10 @@ import Photo from '../../components/Photo';
 
 const styles = theme => ({
     photoPage: {
+        paddingTop: '20px',
         height:'100vh',
         overflowY: 'auto',
+        backgroundColor: 'white',
     },
     backToTopBtn: {
         cursor: 'pointer',

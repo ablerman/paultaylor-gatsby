@@ -20,7 +20,7 @@ const styles = theme => ({
     root: {
         [theme.breakpoints.up('md')]: {
             marginLeft: '255px',
-            paddingTop: '20px',
+            // paddingTop: '20px',
         }
     },
     drawer: {
