@@ -1,0 +1,928 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/paultaylor-gatsby/app.aaa376d5a189eed27a07.css">html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body,div,html{border:0;margin:0;padding:0}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;background:#fafafa;color:rgba(0,0,0,.87);font-family:Roboto,Helvetica,Arial,sans-serif;font-size:14px}h1{color:rgba(0,0,0,.54);font-size:2.8125rem;font-weight:400;line-height:1.13333em}h1,h2{margin:0 0 .35em}h2{font-size:1.3125rem;font-weight:500;line-height:1.16667em}h2,p{color:rgba(0,0,0,.87)}p{font-size:.875rem;font-weight:400;line-height:1.46429em;margin:0 0 1em}</style><meta name="generator" content="Gatsby 2.0.0"/><style type="text/css" id="server-side-jss">.jss90 {
+  margin: 0;
+  display: block;
+}
+.jss91 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 7rem;
+  font-weight: 300;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.14286em;
+  margin-left: -.04em;
+  letter-spacing: -.04em;
+}
+.jss92 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.30357em;
+  margin-left: -.02em;
+  letter-spacing: -.02em;
+}
+.jss93 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.8125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.13333em;
+  margin-left: -.02em;
+}
+.jss94 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.20588em;
+}
+.jss95 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.35417em;
+}
+.jss96 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.3125rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.16667em;
+}
+.jss97 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5em;
+}
+.jss98 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.71429em;
+}
+.jss99 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.46429em;
+}
+.jss100 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.375em;
+}
+.jss101 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+.jss102 {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+.jss103 {
+  text-align: left;
+}
+.jss104 {
+  text-align: center;
+}
+.jss105 {
+  text-align: right;
+}
+.jss106 {
+  text-align: justify;
+}
+.jss107 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.jss108 {
+  margin-bottom: 0.35em;
+}
+.jss109 {
+  margin-bottom: 16px;
+}
+.jss110 {
+  color: inherit;
+}
+.jss111 {
+  color: #663399;
+}
+.jss112 {
+  color: #ffb238;
+}
+.jss113 {
+  color: rgba(0, 0, 0, 0.87);
+}
+.jss114 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.jss115 {
+  color: #f44336;
+}
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+.jss79 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.jss80 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+}
+.jss81 {
+  opacity: 0.3;
+  transform: scale(1);
+  animation: mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss82 {
+  animation-duration: 200ms;
+}
+.jss83 {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.jss84 {
+  opacity: 0;
+  animation: mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss85 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: mui-ripple-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@keyframes mui-ripple-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@keyframes mui-ripple-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mui-ripple-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.jss67 {
+  color: inherit;
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  display: inline-flex;
+  padding: 0;
+  outline: none;
+  position: relative;
+  user-select: none;
+  align-items: center;
+  border-radius: 0;
+  vertical-align: middle;
+  justify-content: center;
+  -moz-appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.jss67::-moz-focus-inner {
+  border-style: none;
+}
+.jss67.jss68 {
+  cursor: default;
+  pointer-events: none;
+}
+.jss61 {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.jss61:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss61.jss65 {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss61:hover {
+    background-color: transparent;
+  }
+}
+.jss61:hover.jss65 {
+  background-color: transparent;
+}
+.jss62 {
+  color: inherit;
+}
+.jss63 {
+  color: #663399;
+}
+.jss63:hover {
+  background-color: rgba(102, 51, 153, 0.08);
+}
+@media (hover: none) {
+  .jss63:hover {
+    background-color: transparent;
+  }
+}
+.jss64 {
+  color: #ffb238;
+}
+.jss64:hover {
+  background-color: rgba(255, 178, 56, 0.08);
+}
+@media (hover: none) {
+  .jss64:hover {
+    background-color: transparent;
+  }
+}
+.jss66 {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.jss70 {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 24px;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  user-select: none;
+  flex-shrink: 0;
+}
+.jss71 {
+  color: #663399;
+}
+.jss72 {
+  color: #ffb238;
+}
+.jss73 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.jss74 {
+  color: #f44336;
+}
+.jss75 {
+  color: rgba(0, 0, 0, 0.26);
+}
+.jss76 {
+  font-size: inherit;
+}
+.jss77 {
+  font-size: 20px;
+}
+.jss78 {
+  font-size: 36px;
+}
+.jss142 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+.jss143 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.jss144 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.jss145 {
+  padding-top: 0;
+}
+.jss146 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.jss146.jss156 {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+.jss147 {
+  position: relative;
+}
+.jss148 {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss150 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.jss151 {
+  opacity: 0.5;
+}
+.jss152 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background-clip: padding-box;
+}
+.jss153 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .jss153 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.jss154 {
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.jss154:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+@media (hover: none) {
+  .jss154:hover {
+    background-color: transparent;
+  }
+}
+.jss155 {
+  padding-right: 32px;
+}
+.jss157 {
+  flex: 1 1 auto;
+  padding: 0 16px;
+  min-width: 0;
+}
+.jss157:first-child {
+  padding-left: 0;
+}
+.jss158:first-child {
+  padding-left: 56px;
+}
+.jss159 {
+  font-size: 0.8125rem;
+}
+.jss160.jss162 {
+  font-size: inherit;
+}
+.jss161.jss162 {
+  font-size: inherit;
+}
+.jss116 {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  min-height: 36px;
+  box-sizing: border-box;
+  line-height: 1.4em;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.jss116:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss116.jss136 {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss116:hover {
+    background-color: transparent;
+  }
+}
+.jss116:hover.jss136 {
+  background-color: transparent;
+}
+.jss117 {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.jss119 {
+  color: #663399;
+}
+.jss119:hover {
+  background-color: rgba(102, 51, 153, 0.08);
+}
+@media (hover: none) {
+  .jss119:hover {
+    background-color: transparent;
+  }
+}
+.jss120 {
+  color: #ffb238;
+}
+.jss120:hover {
+  background-color: rgba(255, 178, 56, 0.08);
+}
+@media (hover: none) {
+  .jss120:hover {
+    background-color: transparent;
+  }
+}
+.jss124 {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+.jss125 {
+  border: 1px solid rgba(102, 51, 153, 0.5);
+}
+.jss125:hover {
+  border: 1px solid #663399;
+}
+.jss126 {
+  border: 1px solid rgba(255, 178, 56, 0.5);
+}
+.jss126:hover {
+  border: 1px solid #ffb238;
+}
+.jss127 {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  background-color: #e0e0e0;
+}
+.jss127.jss135 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.jss127:active {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.jss127.jss136 {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.jss127:hover {
+  background-color: #d5d5d5;
+}
+@media (hover: none) {
+  .jss127:hover {
+    background-color: #e0e0e0;
+  }
+}
+.jss127:hover.jss136 {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.jss128 {
+  color: #fff;
+  background-color: #663399;
+}
+.jss128:hover {
+  background-color: rgb(71, 35, 107);
+}
+@media (hover: none) {
+  .jss128:hover {
+    background-color: #663399;
+  }
+}
+.jss129 {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffb238;
+}
+.jss129:hover {
+  background-color: rgb(178, 124, 39);
+}
+@media (hover: none) {
+  .jss129:hover {
+    background-color: #ffb238;
+  }
+}
+.jss133 {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  min-width: 0;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+}
+.jss133:active {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.jss134 {
+  width: auto;
+  height: 48px;
+  padding: 0 16px;
+  min-width: 48px;
+  border-radius: 24px;
+}
+.jss137 {
+  color: inherit;
+}
+.jss138 {
+  width: 40px;
+  height: 40px;
+}
+.jss139 {
+  padding: 7px 8px;
+  min-width: 64px;
+  font-size: 0.8125rem;
+  min-height: 32px;
+}
+.jss140 {
+  padding: 8px 24px;
+  min-width: 112px;
+  font-size: 0.9375rem;
+  min-height: 40px;
+}
+.jss141 {
+  width: 100%;
+}
+.jss86 {
+  font-family: Abel, sans-serif;
+}
+.jss87 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.jss88 {
+  padding: 0 24px;
+}
+.jss89 {
+  font-weight: bolder;
+}
+@media (min-width:0px) and (max-width:599.95px) {
+  .jss8 {
+    display: none;
+  }
+}
+@media (min-width:0px) {
+  .jss9 {
+    display: none;
+  }
+}
+@media (max-width:599.95px) {
+  .jss10 {
+    display: none;
+  }
+}
+@media (min-width:600px) and (max-width:959.95px) {
+  .jss11 {
+    display: none;
+  }
+}
+@media (min-width:600px) {
+  .jss12 {
+    display: none;
+  }
+}
+@media (max-width:959.95px) {
+  .jss13 {
+    display: none;
+  }
+}
+@media (min-width:960px) and (max-width:1279.95px) {
+  .jss14 {
+    display: none;
+  }
+}
+@media (min-width:960px) {
+  .jss15 {
+    display: none;
+  }
+}
+@media (max-width:1279.95px) {
+  .jss16 {
+    display: none;
+  }
+}
+@media (min-width:1280px) and (max-width:1919.95px) {
+  .jss17 {
+    display: none;
+  }
+}
+@media (min-width:1280px) {
+  .jss18 {
+    display: none;
+  }
+}
+@media (max-width:1919.95px) {
+  .jss19 {
+    display: none;
+  }
+}
+@media (min-width:1920px) {
+  .jss20 {
+    display: none;
+  }
+}
+@media (min-width:1920px) {
+  .jss21 {
+    display: none;
+  }
+}
+@media (min-width:0px) {
+  .jss22 {
+    display: none;
+  }
+}
+.jss34 {
+  background-color: #fff;
+}
+.jss35 {
+  border-radius: 4px;
+}
+.jss36 {
+  box-shadow: none;
+}
+.jss37 {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.jss38 {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+.jss39 {
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+.jss40 {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.jss41 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+.jss42 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.jss43 {
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+}
+.jss44 {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.jss45 {
+  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+}
+.jss46 {
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+}
+.jss47 {
+  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+}
+.jss48 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.jss49 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+.jss50 {
+  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12);
+}
+.jss51 {
+  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12);
+}
+.jss52 {
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+.jss53 {
+  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12);
+}
+.jss54 {
+  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12);
+}
+.jss55 {
+  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+}
+.jss56 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+}
+.jss57 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12);
+}
+.jss58 {
+  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12);
+}
+.jss59 {
+  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12);
+}
+.jss60 {
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+.jss23 {
+  flex: 0 0 auto;
+}
+.jss24 {
+  top: 0;
+  flex: 1 0 auto;
+  height: 100%;
+  display: flex;
+  z-index: 1200;
+  outline: none;
+  position: fixed;
+  overflow-y: auto;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+.jss25 {
+  left: 0;
+  right: auto;
+}
+.jss26 {
+  left: auto;
+  right: 0;
+}
+.jss27 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  height: auto;
+  max-height: 100%;
+}
+.jss28 {
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  max-height: 100%;
+}
+.jss29 {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jss30 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jss31 {
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jss32 {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.jss166 {
+  width: 100%;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.jss167 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+}
+.jss168 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: absolute;
+}
+.jss169 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: sticky;
+}
+.jss170 {
+  position: static;
+}
+.jss171 {
+  position: relative;
+}
+.jss172 {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.jss173 {
+  color: #fff;
+  background-color: #663399;
+}
+.jss174 {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffb238;
+}
+.jss175 {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.jss176 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .jss176 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.jss177 {
+  min-height: 56px;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .jss177 {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .jss177 {
+    min-height: 64px;
+  }
+}
+.jss178 {
+  min-height: 48px;
+}
+.jss163 {
+  flex: [object Object];
+  font-family: Abel, sans-serif;
+}
+.jss164 {
+  flex-grow: 1;
+}
+@media (min-width:960px) {
+  .jss5 {
+    left: 255px;
+    width: calc(100vw - 255px);
+    position: relative;
+  }
+}
+.jss6 {
+  padding-top: 20px;
+}
+@media (min-width:960px) {
+  .jss1 {
+    margin-left: 255px;
+  }
+}
+.jss2 {
+  width: 120px;
+  height: auto;
+}
+.jss3 {
+  margin: 30px;
+  padding: 30px;
+  display: grid;
+  background-color: white;
+  grid-template-rows: 1fr 1fr 1fr,;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}</style><title data-react-helmet="true"></title><link rel="shortcut icon" href="/paultaylor-gatsby/icons/icon-48x48.png"/><link rel="manifest" href="/paultaylor-gatsby/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link as="script" rel="preload" href="/paultaylor-gatsby/4-a238a6292217af9192d8.js"/><link as="script" rel="preload" href="/paultaylor-gatsby/component---src-pages-clients-js-7fc053fc4de58d3754a7.js"/><link as="script" rel="preload" href="/paultaylor-gatsby/1-d81c4e6bc81e6e11ef0e.js"/><link as="script" rel="preload" href="/paultaylor-gatsby/0-8c070c3e276ab05d1a63.js"/><link as="script" rel="preload" href="/paultaylor-gatsby/app-938faad4327099a668be.js"/><link as="script" rel="preload" href="/paultaylor-gatsby/webpack-runtime-5f267dbd36ee03541054.js"/><link rel="preload" href="/paultaylor-gatsby/static/d/361/path---clients-0-df-854-NZuapzHg3X9TaN1iIixfv1W23E.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="jss7"><div class="jss13"><div class="jss23"><div class="jss34 jss36 jss24 jss25 jss29"><div class="jss6"><a href="/paultaylor-gatsby/" style="text-decoration:none"><h1 style="color:black;text-align:center;margin-bottom:0">Paul Taylor</h1></a><div style="display:flex;justify-content:center"><a tabindex="0" class="jss67 jss61" role="button" to="https://www.instagram.com/thisispaultaylor" href="https://www.instagram.com/thisispaultaylor"><span class="jss66"><svg class="jss70" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation" style="fill:black"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"></path></svg></span><span class="jss79"></span></a><a tabindex="0" class="jss67 jss61" role="button" to="https://thisispaultaylor.instagram.com" href="https://thisispaultaylor.instagram.com"><span class="jss66"><svg class="jss70" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation" style="fill:black"><path d="M17,11H13V15.5C13,16.44 13.28,17 14.5,17H17V21C17,21 15.54,21.05 14.17,21.05C10.8,21.05 9.5,19 9.5,16.75V11H7V7C10.07,6.74 10.27,4.5 10.5,3H13V7H17"></path></svg></span><span class="jss79"></span></a><a tabindex="0" class="jss67 jss61" role="button" to="mailto://hello@thisispayltaylor.com" href="mailto://hello@thisispayltaylor.com"><span class="jss66"><svg class="jss70" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation" style="fill:black"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 4.99L4 6h16zm0 12H4V8l8 5 8-5v10z"></path></svg></span><span class="jss79"></span></a></div></div><div><p class="jss90 jss99"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/index.html"><span class="jss117">events</span><span class="jss79"></span></a></p><ul class="jss142 jss144 jss143 jss86 jss87"><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/amazon/index.html"><span class="jss117">Amazon</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/cyo/index.html"><span class="jss117">CYO</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/hulu/index.html"><span class="jss117">Hulu</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/krazy_glue/index.html"><span class="jss117">Krazy Glue</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/lost_in_space/index.html"><span class="jss117">Lost In Space</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/narcos/index.html"><span class="jss117">Narcos</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/national_geographic/index.html"><span class="jss117">National Geographic</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/panera/index.html"><span class="jss117">Panera</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/pet_smart_and_purina/index.html"><span class="jss117">Pet Smart &amp; Purina</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/rossana_pansino/index.html"><span class="jss117">Rossana Pansino</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/silk/index.html"><span class="jss117">Silk</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/sonic/index.html"><span class="jss117">Sonic</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/trick_or_treat/index.html"><span class="jss117">Trick or Treat</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/water_is_unfair/index.html"><span class="jss117">Water is Unfair</span><span class="jss79"></span></a></span></div></li><li class="jss146 jss149 jss150 jss153 jss88"><div class="jss157 jss159"><span class="jss90 jss97 jss160 jss162"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/events/we_tv/index.html"><span class="jss117">WE tv</span><span class="jss79"></span></a></span></div></li></ul><p class="jss90 jss99"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/places/index.html"><span class="jss117">places</span><span class="jss79"></span></a></p><p class="jss90 jss99"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/music/index.html"><span class="jss117">music</span><span class="jss79"></span></a></p><p class="jss90 jss99"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/street/index.html"><span class="jss117">street</span><span class="jss79"></span></a></p><p class="jss90 jss99"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/clients/index.html"><span class="jss117">clients</span><span class="jss79"></span></a></p><p class="jss90 jss99"><a tabindex="0" class="jss67 jss116 jss118 jss121 jss86" role="button" href="/paultaylor-gatsby/contact/index.html"><span class="jss117">contact</span><span class="jss79"></span></a></p></div></div></div></div></div><div><div class="jss163"><div class="jss15"><header class="jss34 jss40 jss166 jss170 jss172"><div class="jss175 jss177 jss176"><button tabindex="0" class="jss67 jss61 jss62 jss165" type="button" aria-label="Menu"><span class="jss66"><svg class="jss70" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></span><span class="jss79"></span></button><h2 class="jss90 jss96 jss110 jss164">Paul Taylor</h2></div></header></div></div><div class="jss5"><div class="jss3"><div><img alt="Amazon" class="jss2" src="/clients/amazon.jpg"/></div><div><img alt="CYO" class="jss2" src="/clients/cyo.jpg"/></div><div><img alt="Eggland" class="jss2" src="/clients/eggland.jpg"/></div><div><img alt="hulu" class="jss2" src="/clients/hulu.jpg"/></div><div><img alt="KrazyGlue" class="jss2" src="/clients/krazyglue.png"/></div><div><img alt="NationalGeographic" class="jss2" src="/clients/natgeo.png"/></div><div><img alt="Netflix" class="jss2" src="/clients/netflix.png"/></div><div><img alt="Panaasonic" class="jss2" src="/clients/panasonic.png"/></div><div><img alt="PaneraBread" class="jss2" src="/clients/panerabread.jpg"/></div><div><img alt="Petsmart" class="jss2" src="/clients/petsmart.jpg"/></div><div><img alt="Purina" class="jss2" src="/clients/purina.png"/></div><div><img alt="Silk" class="jss2" src="/clients/silk.jpg"/></div><div><img alt="Sonic" class="jss2" src="/clients/sonic.png"/></div><div><img alt="Unicef" class="jss2" src="/clients/unicef.png"/></div><div><img alt="WE TV" class="jss2" src="/clients/wetv.jpg"/></div></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-pages-clients-js","jsonName":"clients-0df","path":"/clients/"};window.dataPath="361/path---clients-0-df-854-NZuapzHg3X9TaN1iIixfv1W23E";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app.aaa376d5a189eed27a07.css","/app-938faad4327099a668be.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-3e8d8b674a6e1f9299ee.js"],"component---src-pages-404-js":["/component---src-pages-404-js-6263b6c4a389019d95e8.js"],"component---src-pages-clients-js":["/component---src-pages-clients-js-7fc053fc4de58d3754a7.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-ae30a96b43e6b72c919b.js"],"component---src-pages-events-amazon-js":["/component---src-pages-events-amazon-js-e1f16e64b1be45bac205.js"],"component---src-pages-events-cyo-js":["/component---src-pages-events-cyo-js-f8cb1ca4f238d61365ce.js"],"component---src-pages-events-hulu-js":["/component---src-pages-events-hulu-js-a5877ed36b3b4887df5b.js"],"component---src-pages-events-index-js":["/component---src-pages-events-index-js-52eb0e57e49aee66e516.js"],"component---src-pages-events-krazy-glue-js":["/component---src-pages-events-krazy-glue-js-2ba226131d1a10c12b3f.js"],"component---src-pages-events-lost-in-space-js":["/component---src-pages-events-lost-in-space-js-1ab24a7bab1966686a97.js"],"component---src-pages-events-narcos-js":["/component---src-pages-events-narcos-js-02da4c9bd9052ed62045.js"],"component---src-pages-events-national-geographic-js":["/component---src-pages-events-national-geographic-js-3ac41fad4b22f67e3672.js"],"component---src-pages-events-panera-js":["/component---src-pages-events-panera-js-452591a1859b81d20151.js"],"component---src-pages-events-pet-smart-and-purina-js":["/component---src-pages-events-pet-smart-and-purina-js-c28ab3e8066125036eca.js"],"component---src-pages-events-rossana-pansino-js":["/component---src-pages-events-rossana-pansino-js-9aab1e82c50c7eaa6e10.js"],"component---src-pages-events-silk-js":["/component---src-pages-events-silk-js-599068d2e3b2d2478b7d.js"],"component---src-pages-events-sonic-js":["/component---src-pages-events-sonic-js-ba5c7fc76e9d7f8d33ee.js"],"component---src-pages-events-trick-or-treat-js":["/component---src-pages-events-trick-or-treat-js-3422a5c7218fe1bdab57.js"],"component---src-pages-events-water-is-unfair-js":["/component---src-pages-events-water-is-unfair-js-0b2d16f493801d2bc36b.js"],"component---src-pages-events-we-tv-js":["/component---src-pages-events-we-tv-js-438d8d77f00b8229a569.js"],"component---src-pages-index-js":["/component---src-pages-index-js-90137e69d928d2ac05ab.js"],"component---src-pages-music-js":["/component---src-pages-music-js-2e91eb2f8edbec498f63.js"],"component---src-pages-page-2-js":["/component---src-pages-page-2-js-fbcdeabfe7ea8b7f83f7.js"],"component---src-pages-places-js":["/component---src-pages-places-js-444c27cafb185d3203bf.js"],"component---src-pages-street-js":["/component---src-pages-street-js-8a166a88a1c687225a83.js"]};/*]]>*/</script><script src="/paultaylor-gatsby/webpack-runtime-5f267dbd36ee03541054.js" async=""></script><script src="/paultaylor-gatsby/app-938faad4327099a668be.js" async=""></script><script src="/paultaylor-gatsby/0-8c070c3e276ab05d1a63.js" async=""></script><script src="/paultaylor-gatsby/1-d81c4e6bc81e6e11ef0e.js" async=""></script><script src="/paultaylor-gatsby/component---src-pages-clients-js-7fc053fc4de58d3754a7.js" async=""></script><script src="/paultaylor-gatsby/4-a238a6292217af9192d8.js" async=""></script></body></html>
