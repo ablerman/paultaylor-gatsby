@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import {compose, map} from 'ramda'
+import {map} from 'ramda'
 import Layout from '../components/Layout'
-import PhotoPage from '../components/PhotoPage/PhotoPage';
 import logos from '../constants/clientLogos';
 
 
