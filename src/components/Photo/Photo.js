@@ -36,6 +36,7 @@ const styles = theme => ({
         width: '100%',
         height: '100%',
         fontSize: '1px',
+        objectFit: 'cover',
         // borderRadius: '10px'
     }
 });
