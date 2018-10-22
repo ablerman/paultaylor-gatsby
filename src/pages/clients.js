@@ -15,6 +15,7 @@ const styles = theme => ({
     img: {
         height:'auto',
         width: '120px',
+        objectFit: 'cover',
     },
     gridContainer: {
         margin: '30px',
