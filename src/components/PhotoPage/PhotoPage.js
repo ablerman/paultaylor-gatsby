@@ -32,6 +32,7 @@ class PhotoPage extends React.Component {
 
     render() {
         const classes = this.props.classes;
+        console.log(this.props.photos)
         return (
             <div
                 className={classes.photoPage}

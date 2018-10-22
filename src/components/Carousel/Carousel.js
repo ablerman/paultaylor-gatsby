@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { withPrefix } from 'gatsby'
 import { findIndex, find } from 'ramda';
+import classnames from 'classnames'
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import Arrow from '../../components/Arrow'
 import Palette from '../../utils/Palette';
@@ -39,6 +40,17 @@ const styles = (theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    leftLink: {
+        cursor: 'w-resize',
+    },
+    rightLink: {
+        cursor: 'e-resize',
+    },
+    prevnext: {
+        color: 'black',
+        display: 'inline-block',
+        paddingLeft: '15px',
     },
     masonryLink: {
         position: 'absolute',
@@ -147,51 +159,68 @@ class Carousel extends React.Component {
         })(this.props.photos)
 
         return (
-            <div className={this.props.classes.content}>
-                <img
-                    src={withPrefix(photo.path)}
-                    alt={this.props.currentPhoto}
-                    onLoad={this.onImageLoaded}
-                    style={{width: '100%',}}
-                />
-                <a
-                    href={this.getPrev()}
-                    className={this.props.classes.link}
-                    style={{left:0}}
-                >
-                    <Arrow
-                        direction={Arrow.LEFT}
-                        color={this.state.arrowColor}
-                        shadowColor={this.state.shadowColor}
+            <div>
+                <div className={this.props.classes.content}>
+                    <img
+                        src={withPrefix(photo.path)}
+                        alt={this.props.currentPhoto}
+                        onLoad={this.onImageLoaded}
+                        style={{width: '100%',}}
                     />
-                </a>
-                <a
-                    href={this.getNext()}
-                    className={this.props.classes.link}
-                    style={{right:0}}
-                >
-                    <Arrow
-                        direction={Arrow.RIGHT}
-                        color={this.state.arrowColor}
-                        shadowColor={this.state.shadowColor}
-                    />
-                </a>
-                <a
-                    href={this.getMasonryUrl()}
-                    className={this.props.classes.masonryLink}
-                >
-                    <DashboardIcon
-                        style={{width: '25px', height: '25px', position: 'absolute', transform: 'scale(1.5)',
-                            filter: 'blur(5px)',
-                        }}
-                        nativeColor={this.state.arrowColor}
-                    />
-                    <DashboardIcon
-                        style={{width: '25px', height: '25px', position: 'absolute'}}
-                        nativeColor={this.state.shadowColor}
-                    />
+                    <a
+                        href={this.getPrev()}
+                        className={classnames(this.props.classes.link, this.props.classes.leftLink)}
+                        style={{left:0}}
+                    >
+                        {/*<Arrow*/}
+                            {/*direction={Arrow.LEFT}*/}
+                            {/*color={this.state.arrowColor}*/}
+                            {/*shadowColor={this.state.shadowColor}*/}
+                        {/*/>*/}
+                    </a>
+                    <a
+                        href={this.getNext()}
+                        className={classnames(this.props.classes.link, this.props.classes.rightLink)}
+                        // className={this.props.classes.link}
+                        style={{right:0}}
+                    >
+                        {/*<Arrow*/}
+                            {/*direction={Arrow.RIGHT}*/}
+                            {/*color={this.state.arrowColor}*/}
+                            {/*shadowColor={this.state.shadowColor}*/}
+                        {/*/>*/}
+                    </a>
+                    <a
+                        href={this.getMasonryUrl()}
+                        className={this.props.classes.masonryLink}
+                    >
+                        <DashboardIcon
+                            style={{width: '25px', height: '25px', position: 'absolute', transform: 'scale(1.5)',
+                                filter: 'blur(5px)',
+                            }}
+                            nativeColor={this.state.arrowColor}
+                        />
+                        <DashboardIcon
+                            style={{width: '25px', height: '25px', position: 'absolute'}}
+                            nativeColor={this.state.shadowColor}
+                        />
 
-                </a>
+                    </a>
+                </div>
+                <span className={this.props.classes.prevnext}>
+                    <a
+                        className={this.props.classes.prevnext}
+                        href={this.getPrev()}>
+                        prev
+                    </a>
+                    &nbsp;//&nbsp;
+                    <a
+                        className={this.props.classes.prevnext}
+                        style={{paddingLeft:0}}
+                        href={this.getNext()}>
+                        next
+                    </a>
+                </span>
             </div>
         );
     }

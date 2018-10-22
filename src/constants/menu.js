@@ -18,12 +18,12 @@ const menu = [
                 name: 'Amazon',
                 title: 'Amazon Alexa // Smartlife Roadshow',
                 location: '/events/amazon',
-                photos: AmazonPhotos
+                photos: AmazonPhotos,
             },
             {
                 name: 'CYO',
                 location: '/events/cyo',
-                photos: CYOPhotos
+                photos: CYOPhotos,
             },
             {
                 name: 'Hulu',

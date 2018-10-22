@@ -3,13 +3,15 @@ const photos = [
         path: '/portfolio/events/alexa/alexa02.jpg',
         alt: 'Amazon 02',
         label: 'Amazon Alexa // Smartlife Roadshow',
-        to: '/events/amazon'
+        to: '/events/amazon',
+        colSpan: 7,
     },
     {
         path: '/portfolio/events/cyo/cyo03-2.jpg',
         alt: 'CYO',
         label: 'CYO // Press Evening',
-        to: '/events/cyo'
+        to: '/events/cyo',
+        colSpan: 5,
     },
     {
         path: '/portfolio/events/hulu/hulu06.jpg',
@@ -39,13 +41,15 @@ const photos = [
         path: '/portfolio/events/natGeo/natgeo25-2.jpg',
         alt: 'Nat Geo',
         label: 'National Geographic // One Strange Rock',
-        to: '/events/national_geographic'
+        to: '/events/national_geographic',
+        colSpan: 5,
     },
     {
         path: '/portfolio/events/panera/panera05.jpg',
         alt: 'Panera Bread',
         label: 'Panera Bread // Breakfast Sandwich Launch',
-        to: '/events/panera'
+        to: '/events/panera',
+        colSpan: 7,
     },
     {
         path: '/portfolio/events/petSmart/petsmart12.jpg',
@@ -63,13 +67,15 @@ const photos = [
         path: '/portfolio/events/silk/silk15.jpg',
         alt: 'Silk',
         label: ' Silk // Pedal for Progress',
-        to: '/events/silk'
+        to: '/events/silk',
+        colSpan: 7,
     },
     {
         path: '/portfolio/events/sonic/sonic15-2.jpg',
         alt: 'Sonic',
         label: 'Sonic Slingers // Food Truck',
-        to: '/events/sonic'
+        to: '/events/sonic',
+        colSpan: 5,
     },
     {
         path: '/portfolio/events/unicefTrick/unicefTrick07.jpg',
@@ -87,7 +93,8 @@ const photos = [
         path: '/portfolio/events/weTV/weTV12.jpg',
         alt: 'we TV',
         label: 'WE TV // Juice Bar',
-        to: '/events/we_tv'
+        to: '/events/we_tv',
+        colSpan: 12,
     }
 ];
 
