@@ -14,24 +14,28 @@ const photos = [
         alt: 'Events',
         label: 'Events',
         to: '/events/index.html',
+        colSpan: 7,
     },
     {
         path: '/portfolio/placescropped.jpg',
         alt: 'Places',
         label: 'Places',
         to: '/places/index.html',
+        colSpan: 5,
     },
     {
         path: '/portfolio/musiccropped.jpg',
         alt: 'music',
         label: 'Music',
         to: '/music/index.html',
+        colSpan: 5,
     },
     {
         path: '/portfolio/street.jpg',
         alt: 'Street',
         label: 'Street',
         to: '/street/index.html',
+        colSpan: 7,
     }
 ]
 
