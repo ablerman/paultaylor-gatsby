@@ -1,4 +1,5 @@
 import React from 'react';
+import { withPrefix } from 'gatsby'
 import { withStyles } from '@material-ui/core/styles';
 import {map} from 'ramda'
 import Layout from '../components/Layout'
@@ -30,15 +31,17 @@ const styles = theme => ({
 });
 
 const clients = (props) => {
-    const cells = map(item => (
-        <div key={item.alt}>
-            <img
-                alt={item.alt}
-                className={props.classes.img}
-                src={`/${item.path}`}
-            />
-        </div>
-    ), logos)
+    const cells = map(item => {
+        return (
+            <div key={item.alt}>
+                <img
+                    alt={item.alt}
+                    className={props.classes.img}
+                    src={withPrefix(item.path)}
+                />
+            </div>
+        )
+    }, logos)
 
     return (
         <Layout location={props.location}>
