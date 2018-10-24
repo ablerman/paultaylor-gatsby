@@ -27,7 +27,6 @@ class Amazon extends React.Component {
     renderContent = () => {
         const queryParams = parse(this.props.location.search);
         if (queryParams.image !== undefined) {
-            console.log('carousel')
             return (
                 <Carousel
                     photos={photos}

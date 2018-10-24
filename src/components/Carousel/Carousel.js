@@ -5,7 +5,6 @@ import { withPrefix } from 'gatsby'
 import { findIndex, find } from 'ramda';
 import classnames from 'classnames'
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import Arrow from '../../components/Arrow'
 import Palette from '../../utils/Palette';
 
 const KEY_UP = 'keyup';

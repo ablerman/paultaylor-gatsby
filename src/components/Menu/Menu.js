@@ -24,9 +24,13 @@ const styles = theme => ({
     listItem: {
       padding: '0 24px',
     },
-    active : {
+    active: {
         fontWeight: 'bolder'
     },
+    link: {
+        minHeight: 0,
+        padding: '0 16px',
+    }
 });
 
 
@@ -39,18 +43,22 @@ const Menu = props => {
 
     const generateList = children => {
         const listClasses = [props.classes.root, props.classes.list]
+
         if (children.length) {
             return (
-                <List dense={true} className={listClasses.join(' ')}>
+                <List dense={true} disablePadding={true} className={listClasses.join(' ')}>
                     {children.map(child => {
                         const pathname = pathOr(null, ['location', 'pathname'], props);
                         const location = `${child.location}/index.html`
-                        const classes = classnames(
+
+                        const linkClasses = classnames(
+                            props.classes.link,
                             props.classes.root,
                             {
-                                [props.classes.active]: withPrefix(pathname) === location,
+                                [props.classes.active]: withPrefix(pathname) === location
                             }
                         )
+
                         return (
                             <ListItem key={child.name} className={props.classes.listItem}>
                                 <ListItemText>
@@ -58,7 +66,7 @@ const Menu = props => {
                                         component={Link}
                                         to={`${child.location}/index.html`}
                                         onClick={onButtonClick}
-                                        className={classes}
+                                        className={linkClasses}
                                     >
                                         {child.name}
                                     </Button>
@@ -76,6 +84,7 @@ const Menu = props => {
         const location = `${item.location}/index.html`
 
         const classes = classnames(
+            props.classes.link,
             props.classes.root,
             {
                 [props.classes.active]: withPrefix(pathname) === location

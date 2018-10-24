@@ -29,7 +29,7 @@ class Palette {
 
     buildPixels() {
         const pixels = [];
-        // console.log(this.imageData)
+
         for (let i = 0; i < this.getPixelCount(); i++) {
             const r = this.imageData.data[i * 4 + 0];
             const g = this.imageData.data[i * 4 + 1];
