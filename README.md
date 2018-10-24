@@ -31,4 +31,11 @@ Production Build
 $ gatsby build
 ```
 
+Deploy
+------
+Deploys to https://ablerman.github.io/paultaylor-gatsby/
+```base
+$ yarn deploy
+```
+
 Now deploy the public folder to your production web server.
